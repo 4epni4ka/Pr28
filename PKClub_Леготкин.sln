@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PKClub_Леготкин", "PKClub_Леготкин\PKClub_Леготкин.csproj", "{EB6F2C0D-B937-44C8-B660-00E974E536E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnection", "DBConnection\DBConnection.csproj", "{2FB4E63C-6BEB-4A84-8559-755A9D8C6566}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EB6F2C0D-B937-44C8-B660-00E974E536E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB6F2C0D-B937-44C8-B660-00E974E536E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB6F2C0D-B937-44C8-B660-00E974E536E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB4E63C-6BEB-4A84-8559-755A9D8C6566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB4E63C-6BEB-4A84-8559-755A9D8C6566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB4E63C-6BEB-4A84-8559-755A9D8C6566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB4E63C-6BEB-4A84-8559-755A9D8C6566}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
