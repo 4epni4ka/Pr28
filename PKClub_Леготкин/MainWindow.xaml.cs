@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PKClub_Леготкин.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,32 @@ namespace PKClub_Леготкин
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow init;
+        public static List<Hall> AllHall = new Hall().AllHall();
+        public static List<Rent> AllRent = new Rent().AllRent();
+        public enum pages
+        {
+            hall,
+            rent,
+            addHall,
+            addRent
+        }
         public MainWindow()
         {
             InitializeComponent();
+            init = this;
+            OpenPages(pages.hall);
+        }
+        public void OpenPages(pages _pages)
+        {
+            if (_pages == pages.hall)
+                frame.Navigate(new Pages.HallPage());
+            if (_pages == pages.rent)
+                frame.Navigate(new Pages.RentPage());
+            if (_pages == pages.addHall)
+                frame.Navigate(new Pages.Add.AddHall());
+            if (_pages == pages.addRent)
+                frame.Navigate(new Pages.Add.AddRent());
         }
     }
 }

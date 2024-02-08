@@ -107,6 +107,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Elements\HallItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\RentItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,12 +125,46 @@
     </Compile>
     <Compile Include="Classes\Hall.cs" />
     <Compile Include="Classes\Rent.cs" />
+    <Compile Include="Elements\HallItem.xaml.cs">
+      <DependentUpon>HallItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\RentItem.xaml.cs">
+      <DependentUpon>RentItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Add\AddHall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Add\AddRent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HallPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Add\AddHall.xaml.cs">
+      <DependentUpon>AddHall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Add\AddRent.xaml.cs">
+      <DependentUpon>AddRent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HallPage.xaml.cs">
+      <DependentUpon>HallPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RentPage.xaml.cs">
+      <DependentUpon>RentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
