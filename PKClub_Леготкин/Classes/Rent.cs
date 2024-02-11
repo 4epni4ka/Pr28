@@ -50,7 +50,7 @@ namespace PKClub_Леготкин.Classes
                 MySqlDataReader dataReader = Connection.Query("UPDATE pkclub.rent " + "SET " +
                     $"idHall = '{this.idHall}', " +
                     $"numComp = '{this.numComp}', " +
-                    $"date = '{this.Date}', " +
+                    $"date = '{this.Date.ToString("yyyy.MM.dd HH:mm:ss")}', " +
                     $"FIO = '{this.FIO}' " +
                     $"WHERE id = '{this.id}';", connection);
 
@@ -67,7 +67,7 @@ namespace PKClub_Леготкин.Classes
                 "VALUES (" +
                 $"'{this.idHall}', " +
                 $"'{this.numComp}', " +
-                $"'{this.Date}', " +
+                $"'{this.Date.ToString("yyyy.MM.dd HH:mm:ss")}', " +
                 $"'{this.FIO}');", connection);
 
                 Connection.CloseConnection(connection);

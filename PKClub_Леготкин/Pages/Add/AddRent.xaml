@@ -6,9 +6,27 @@
       xmlns:local="clr-namespace:PKClub_Леготкин.Pages.Add"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddRent">
+      Title="Add">
 
     <Grid>
-        
+        <Grid Height="70" VerticalAlignment="Top" Background="Gray">
+            <Image Stretch="UniformToFill" Margin="25,10,0,10" Height="50" Width="50" HorizontalAlignment="Left"/>
+            <Label Content="Добавить аренду" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center" FontSize="24" Margin="100,0,0,0" HorizontalAlignment="Left" Width="512"/>
+            <Button Click="Back" Background="White" Width="125" Height="25" Content="Вернуться" Margin="0,15,14,30" HorizontalAlignment="Right"/>
+        </Grid>
+        <Grid Margin="0,70,0,0" Background="White">
+            <Label Content="Укажите номер компьютера:" Margin="10,70,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="216"/>
+            <TextBox x:Name="tb_numComp" Margin="10,100,10,0" Height="25" VerticalAlignment="Top"/>
+            <Label Content="Укажите клуб:" Margin="10,10,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="216"/>
+            <ComboBox x:Name="tb_club" Margin="10,40,10,0" Height="25" VerticalAlignment="Top">
+
+            </ComboBox>
+            <Label Content="Укажите дату и время аренды:" Margin="10,130,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="216"/>
+            <DatePicker x:Name="tb_date" Margin="10,160,140,0" Height="25" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_time" Margin="0,160,10,0" Text="00:00" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="125"/>
+            <Label Content="Укажите ФИО:" Margin="10,190,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="216"/>
+            <TextBox x:Name="tb_fio" Margin="10,220,10,0" Height="25" VerticalAlignment="Top"/>
+            <Button x:Name="bthAdd" Click="Save" Background="White" Width="125" Content="Сохранить" Margin="0,0,10,15" HorizontalAlignment="Right" Height="25" VerticalAlignment="Bottom"/>
+        </Grid>
     </Grid>
 </Page>

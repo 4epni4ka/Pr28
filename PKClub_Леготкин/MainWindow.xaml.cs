@@ -40,9 +40,15 @@ namespace PKClub_Леготкин
         public void OpenPages(pages _pages)
         {
             if (_pages == pages.hall)
+            {
+                MainWindow.AllHall = new Hall().AllHall();
                 frame.Navigate(new Pages.HallPage());
+            }
             if (_pages == pages.rent)
+            {
+                MainWindow.AllRent = new Rent().AllRent();
                 frame.Navigate(new Pages.RentPage());
+            }
             if (_pages == pages.addHall)
                 frame.Navigate(new Pages.Add.AddHall());
             if (_pages == pages.addRent)

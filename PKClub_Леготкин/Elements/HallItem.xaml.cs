@@ -34,12 +34,16 @@ namespace PKClub_Леготкин.Elements
 
         private void EditHall(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.init.frame.Navigate(new Pages.Add.AddHall(Hall));
         }
 
         private void DeleteHall(object sender, RoutedEventArgs e)
         {
+            Hall.Delete();
+            MessageBox.Show("Информация о клубе удалена.");
 
+            MainWindow.AllHall = new Hall().AllHall();
+            MainWindow.init.OpenPages(MainWindow.pages.hall);
         }
     }
 }

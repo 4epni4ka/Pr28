@@ -34,12 +34,16 @@ namespace PKClub_Леготкин.Elements
 
         private void EditRent(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.init.frame.Navigate(new Pages.Add.AddRent(Rent));
         }
 
         private void DeleteRent(object sender, RoutedEventArgs e)
         {
+            Rent.Delete();
+            MessageBox.Show("Информация об аренде удалена.");
 
+            MainWindow.AllRent = new Rent().AllRent();
+            MainWindow.init.OpenPages(MainWindow.pages.rent);
         }
     }
 }
