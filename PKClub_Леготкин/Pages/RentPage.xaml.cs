@@ -1,4 +1,6 @@
-﻿using PKClub_Леготкин.Classes;
+﻿using DBConnection;
+using MySql.Data.MySqlClient;
+using PKClub_Леготкин.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +48,57 @@ namespace PKClub_Леготкин.Pages
         private void AddRent(object sender, RoutedEventArgs e)
         {
             MainWindow.init.OpenPages(MainWindow.pages.addRent);
+        }
+
+        public bool sortName = false;
+        private void Sort_Name(object sender, RoutedEventArgs e)
+        {
+            string query = "SELECT * from pkclub.rent ORDER BY FIO;";
+            if (sortName)
+            {
+                query = "SELECT * from pkclub.rent ORDER BY FIO DESC;";
+                sortName = false;
+            }
+            else sortName = true;
+            Sort_Query(query);
+        }
+
+        public bool sortClub = false;
+        private void Sort_Club(object sender, RoutedEventArgs e)
+        {
+            string query = "SELECT * from pkclub.rent ORDER BY idHall;";
+            if (sortClub)
+            {
+                query = "SELECT * from pkclub.rent ORDER BY idHall DESC;";
+                sortClub = false;
+            }
+            else sortClub = true;
+            Sort_Query(query);
+        }
+
+        private void Sort_Clear(object sender, RoutedEventArgs e)
+        {
+            MainWindow.AllRent = new Rent().AllRent();
+            CreateUI();
+        }
+        public void Sort_Query(string query)
+        {
+            List<Rent> allRent = new List<Rent>();
+
+            MySqlConnection connection = Connection.OpenConnection();
+            MySqlDataReader rentQuery = Connection.Query(query, connection);
+            while (rentQuery.Read())
+            {
+                allRent.Add(new Rent(
+                     rentQuery.GetInt32(0),
+                     rentQuery.GetInt32(1),
+                     rentQuery.GetInt32(2),
+                     rentQuery.GetDateTime(3),
+                     rentQuery.GetString(4)));
+            }
+            MainWindow.AllRent = allRent;
+            Connection.CloseConnection(connection);
+            CreateUI();
         }
     }
 }

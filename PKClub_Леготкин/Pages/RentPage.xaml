@@ -21,16 +21,15 @@
                 </StackPanel>
             </ScrollViewer>
             <Button Click="AddRent" Background="White" Width="125" Content="Добавить" Margin="10,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom"/>
-            <!--<Button Background="White" Width="125" Content="Сортировка" Margin="140,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom">
+            <Button Background="White" Width="125" Content="Сортировка" Margin="140,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom">
                 <Button.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="По названию" Click="Sort_Name"/>
-                        <MenuItem Header="По кинотеатру" Click="Sort_Teatr"/>
-                        <MenuItem Header="По дате" Click="Sort_Date"/>
-                        <MenuItem Header="По цене" Click="Sort_Price"/>
+                        <MenuItem Header="По ФИО" Click="Sort_Name"/>
+                        <MenuItem Header="По клубу" Click="Sort_Club"/>
+                        <MenuItem Header="Сбросить" Click="Sort_Clear"/>
                     </ContextMenu>
                 </Button.ContextMenu>
-            </Button>-->
+            </Button>
             <Button Click="Click_Hall" Background="White" Width="125" Content="Клубы" Margin="270,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
