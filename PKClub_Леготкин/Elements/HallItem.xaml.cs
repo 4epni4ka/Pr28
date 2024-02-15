@@ -30,6 +30,11 @@ namespace PKClub_Леготкин.Elements
             Iname.Content = Hall.Name;
             Iaddress.Content = "Адресс: " + Hall.Address;
             Itime.Content = "Время работы: " + Hall.TimeWork;
+            if (!MainWindow.User)
+            {
+                EditButton.Visibility = Visibility.Hidden;
+                DeleteButton.Visibility = Visibility.Hidden;
+            }
         }
 
         private void EditHall(object sender, RoutedEventArgs e)

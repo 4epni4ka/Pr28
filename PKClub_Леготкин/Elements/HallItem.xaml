@@ -11,7 +11,7 @@
         <Label x:Name="Iaddress" Content="Адресс: " Height="25" Width="342" Margin="10,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label x:Name="Itime" Content="Время работы: 00:00 00.00.0000" Height="25" Width="395" Margin="357,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
-        <Button Click="EditHall" Content="Изменить" Margin="0,55,105,5" HorizontalAlignment="Right" Width="90"/>
-        <Button Click="DeleteHall" Content="Удалить" Height="20" Margin="0,0,10,5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="90"/>
+        <Button x:Name="EditButton" Click="EditHall" Content="Изменить" Margin="0,55,105,5" HorizontalAlignment="Right" Width="90"/>
+        <Button x:Name="DeleteButton" Click="DeleteHall" Content="Удалить" Height="20" Margin="0,0,10,5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="90"/>
     </Grid>
 </UserControl>

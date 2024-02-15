@@ -24,6 +24,7 @@ namespace PKClub_Леготкин
         public static MainWindow init;
         public static List<Hall> AllHall = new Hall().AllHall();
         public static List<Rent> AllRent = new Rent().AllRent();
+        public static bool User = true;
         public enum pages
         {
             hall,

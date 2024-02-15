@@ -27,6 +27,11 @@ namespace PKClub_Леготкин.Pages
         {
             InitializeComponent();
             CreateUI();
+            if (!MainWindow.User)
+            {
+                AddName.Visibility = Visibility.Collapsed;
+                Switch_User.Content = "Пользователь";
+            }
         }
         public void CreateUI()
         {
@@ -99,6 +104,25 @@ namespace PKClub_Леготкин.Pages
             MainWindow.AllRent = allRent;
             Connection.CloseConnection(connection);
             CreateUI();
+        }
+
+        private void Switch_user(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.User)
+            {
+                MainWindow.User = false;
+                CreateUI();
+                AddName.Visibility = Visibility.Collapsed;
+                Switch_User.Content = "Пользователь";
+            }
+            else
+            {
+                MainWindow.User = true;
+                CreateUI();
+                AddName.Visibility = Visibility.Visible;
+                Switch_User.Content = "Администратор";
+            }
+
         }
     }
 }

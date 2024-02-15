@@ -30,6 +30,11 @@ namespace PKClub_Леготкин.Elements
             Ihall.Content = "Клуб: " + (MainWindow.AllHall.Find(x => x.id == Rent.idHall)).Name;
             Itime.Content = "Дата и время аренды: " + Rent.Date.ToString("HH:mm dd.MM.yyyy");
             InumComp.Content = "Номер компьютера: " + Rent.numComp.ToString();
+            if (!MainWindow.User)
+            {
+                EditButton.Visibility = Visibility.Hidden;
+                DeleteButton.Visibility = Visibility.Hidden;
+            }
         }
 
         private void EditRent(object sender, RoutedEventArgs e)

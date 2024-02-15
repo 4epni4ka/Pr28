@@ -12,7 +12,7 @@
         <Label x:Name="Itime" Content="Дата и время аренды: 00:00 00.00.0000" Height="25" Width="395" Margin="357,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label x:Name="InumComp" Content="Компьютер: " Height="24" Width="395" Margin="357,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-        <Button Click="EditRent" Content="Изменить" Margin="0,55,105,5" HorizontalAlignment="Right" Width="90"/>
-        <Button Click="DeleteRent" Content="Удалить" Height="20" Margin="0,0,10,5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="90"/>
+        <Button x:Name="EditButton" Click="EditRent" Content="Изменить" Margin="0,55,105,5" HorizontalAlignment="Right" Width="90"/>
+        <Button x:Name="DeleteButton" Click="DeleteRent" Content="Удалить" Height="20" Margin="0,0,10,5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="90"/>
     </Grid>
 </UserControl>

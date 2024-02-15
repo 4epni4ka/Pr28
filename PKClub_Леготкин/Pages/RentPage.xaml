@@ -12,7 +12,8 @@
         <Grid Height="70" VerticalAlignment="Top" Background="Gray">
             <Image Stretch="Fill" Margin="25,10,0,10" Height="50" Width="50" HorizontalAlignment="Left"/>
             <Label Content="Аренды" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center" FontSize="24" Margin="100,0,0,0" HorizontalAlignment="Left" Width="512"/>
-            <Button Click="Exit" Background="White" Width="125" Height="25" Content="Выйти" Margin="0,15,10,30" HorizontalAlignment="Right"/>
+            <Button x:Name="Switch_User" Click="Switch_user" Background="White" Width="125" Height="25" Content="Администратор" Margin="0,5,10,40" HorizontalAlignment="Right"/>
+            <Button Click="Exit" Background="White" Width="125" Height="25" Content="Выйти" Margin="0,40,10,5" HorizontalAlignment="Right"/>
         </Grid>
         <Grid Margin="0,70,0,0" Background="White">
             <ScrollViewer Margin="10,10,10,40" BorderBrush="Black" BorderThickness="5">
@@ -20,17 +21,19 @@
 
                 </StackPanel>
             </ScrollViewer>
-            <Button Click="AddRent" Background="White" Width="125" Content="Добавить" Margin="10,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom"/>
-            <Button Background="White" Width="125" Content="Сортировка" Margin="140,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom">
-                <Button.ContextMenu>
-                    <ContextMenu>
-                        <MenuItem Header="По ФИО" Click="Sort_Name"/>
-                        <MenuItem Header="По клубу" Click="Sort_Club"/>
-                        <MenuItem Header="Сбросить" Click="Sort_Clear"/>
-                    </ContextMenu>
-                </Button.ContextMenu>
-            </Button>
-            <Button Click="Click_Hall" Background="White" Width="125" Content="Клубы" Margin="270,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom"/>
+            <DockPanel Height="35" VerticalAlignment="Bottom">
+                <Button x:Name="AddName" Click="AddRent" Background="White" Width="125" Content="Добавить" Margin="10,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom"/>
+                <Button Background="White" Content="Сортировка" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="125" Margin="10,0,0,10">
+                    <Button.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="По ФИО" Click="Sort_Name"/>
+                            <MenuItem Header="По клубу" Click="Sort_Club"/>
+                            <MenuItem Header="Сбросить" Click="Sort_Clear"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <Button Click="Click_Hall" Background="White" Width="125" Content="Клубы" Margin="10,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom"/>
+            </DockPanel>
         </Grid>
     </Grid>
 </Page>
